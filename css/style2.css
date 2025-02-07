@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    padding: 5px 5px;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+
+.header_skip {
+    display: flex;
+    justify-content:center;
+    width: 100%;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+img {
+width: 25px;
+}
+
+/* Style for the back-icon hover effect */
+.header_skip #backIcon:hover {
+    filter: invert(21%) sepia(79%) saturate(2050%) hue-rotate(191deg) brightness(94%) contrast(102%);
+}
+
+/* Centering and setting full width for the progress-bar image */
+.progress-bar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0px 10px;
+}
+
+.progress-bar img {
+    width: 100%;
+    margin-bottom: 6px; 
+
+}
+
+.skip-link {
+    float: left;
+    background: none;
+    border: none;
+    text-decoration: none;
+    font-weight: 400;
+    color: #959595;
+    cursor: pointer;
+    margin-bottom: 6px; 
+    font-size: 14px;
+}
+.skip-link:hover {
+    color: rgb(53, 79, 231);
+}
+
+
+h1 {
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+    margin: 10px 0;
+}
+
+.p1 {
+    font-weight: 400;
+    font-size: 12px;
+    color: #959595;
+}
+
+.video-container {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    cursor: pointer;  /* Ensures the video is clickable */
+}
+    /* margin-bottom: 20px; */
+    
+iframe {
+    border-radius: 10px;
+}
+
+
+.next-button {
+    background-color: #F16675;
+    color: white;
+    border: none;
+    padding: 16px 74px; /* 74px on left and right, 16px on top and bottom */
+    margin-top: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600; /* SemiBold */
+    font-size: 14px; /* Font size 14px */
+}
+
+.next-button:hover{
+    background-color: #d43d4c;
+}
