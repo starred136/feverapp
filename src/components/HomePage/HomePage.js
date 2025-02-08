@@ -1,50 +1,20 @@
-import React from 'react';
-import VideoPageRedirect from './VideoPageRedirect';
-import './HomePage.css';
+import React from "react";
+import HomePageHeader from "./HomePageHeader";
+import HomePageOptionSection from "./HomePageOptionSection";
+import "./HomePage.css";
 
-function HomePage() {
+
+
+const HomePage = () => {
   return (
     <div className="container">
-      <h1>What can we help you with?</h1>
-      <div className="sections">
-        
-        {/* Section 1 : My child has a Fever (Avec redirection vers VideoPage.js) */}
-        <VideoPageRedirect>
-          <div className="section">
-            <div className="circle small">
-              <img src="assets/child-fever.png" alt="My child has a Fever" />
-            </div>
-            <p>My child has a Fever</p>
-          </div>
-        </VideoPageRedirect>
-
-        {/* Section 2 : Should I see a Doctor? */}
-        <div className="section">
-          <div className="circle small">
-            <img src="assets/doctor.png" alt="Should I see a Doctor?" />
-          </div>
-          <p>Should I see a Doctor?</p>
-        </div>
-
-        {/* Section 3 : Medications */}
-        <div className="section">
-          <div className="circle large custom-bg">
-            <img src="assets/medications.png" alt="Ibuprofen, Paracetamol, Fever Juice, Antibiotics?" />
-          </div>
-          <p>Ibuprofen, Paracetamol, <br /> Fever Juice, Antibiotics?</p>
-        </div>
-
-        {/* Section 4 : Info Library */}
-        <div className="section">
-          <div className="circle small custom-bg">
-            <img src="assets/info-library.png" alt="Info Library" />
-          </div>
-          <p>Info Library</p>
-        </div>
-
-      </div>
+      <HomePageHeader />
+      <HomePageOptionSection />
     </div>
   );
-}
+};
+
+
+
 
 export default HomePage;
