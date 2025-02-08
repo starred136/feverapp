@@ -1,15 +1,21 @@
-// src/FeverIsYourFriendVideoPage.js
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './VideoPage.css';
 
-function FeverIsYourFriendVideoPage() {
+function VideoPage() {
+  const navigate = useNavigate();
+
   return (
     <div className="container">
       <div className="header">
         <div className="header_skip">
-          <a href="/">
-            <img src="assets/back-icon.png" alt="Back" id="backIcon" />
-          </a>
+          <img
+            src="assets/back-icon.png"
+            alt="Back"
+            id="backIcon"
+            onClick={() => navigate('/')}
+            style={{ cursor: 'pointer' }} // Rend l'icône cliquable
+          />
           <div className="progress-bar">
             <img src="assets/prog-icon.png" alt="Progress" />
           </div>
@@ -20,11 +26,11 @@ function FeverIsYourFriendVideoPage() {
       </div>
 
       <div className="video-container">
-        <iframe src="https://drive.google.com/file/d/1bEZdIk-X1E_2aajGqq5Wy3axaignE7J6/preview" width="100%" height="280" allow="autoplay"></iframe>
+        <iframe src="https://drive.google.com/file/d/1bEZdIk-X1E_2aajGqq5Wy3axaignE7J6/preview" width="100%" height="280" allow="autoplay" title="Vidéo explicative sur la fièvre"> </iframe>
       </div>
       <button className="next-button">Next</button>
     </div>
   );
 }
 
-export default FeverIsYourFriendVideoPage;
+export default VideoPage;

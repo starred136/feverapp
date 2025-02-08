@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage/HomePage';
 import VideoPage from './components/VideoPage/VideoPage';
@@ -8,7 +7,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/VideoPage" element={<VideoPage />} />
+        <Route path="/videopage" element={<VideoPage />} />
       </Routes>
     </Router>
   );
