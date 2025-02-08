@@ -8,7 +8,7 @@ function HomePage() {
       <h1>What can we help you with?</h1>
       <div className="sections">
         {/* Section 1 : My child has a Fever */}
-        <a href="/page2" className="carts">
+        <a href="/videopage" className="carts">
           <div className="section">
             <div className="circle small">
               <img src="assets/child-fever.png" alt="My child has a Fever" />

@@ -7,7 +7,7 @@ function FeverIsYourFriendVideoPage() {
     <div className="container">
       <div className="header">
         <div className="header_skip">
-          <a href="/page1">
+          <a href="/">
             <img src="assets/back-icon.png" alt="Back" id="backIcon" />
           </a>
           <div className="progress-bar">
