@@ -1,27 +1,103 @@
+/* src/HomePage.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  background-color: #f9f9f9;
+}
+
 .container {
-    text-align: center;
-    max-width: 400px;
-    margin-top: 112px;
-  }
-  
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  margin-top: 80px;
+  padding-bottom: 40px; /* Ajoute de l'espace sous les sections */
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 32px;
+}
+
+.sections {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* Ajustement de la disposition en colonne pour mobile */
+@media (max-width: 480px) {
   .sections {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    grid-template-columns: 1fr;
   }
-  
-  .section {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 100%;
-    height: 164px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 8px 22px;
-    cursor: pointer;
-  }
-  
+}
+
+.section {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  height: 164px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 8px 22px;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.carts {
+  text-decoration: none;
+}
+
+.circle {
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #F1EFEF;
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.circle.small {
+  width: 93px;
+  height: 93px;
+}
+
+.circle.large {
+  width: 77px;
+  height: 77px;
+}
+
+.circle.custom-bg {
+  background-color: #E5D1EA;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+  margin-top: 16px;
+  text-align: center;
+  word-wrap: break-word;
+}

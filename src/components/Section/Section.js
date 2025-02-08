@@ -1,11 +1,11 @@
 import React from 'react';
 import './Section.css';
 
-const Section = ({ image, text, link }) => {
+const Section = ({ sectionId, image, text, link, customClass = '' }) => {
   return (
-    <a href={link} className="carts">
+    <a href={link} className={`carts ${customClass}`} id={sectionId}>
       <div className="section">
-        <div className="circle small">
+        <div className="circle">
           <img src={image} alt={text} />
         </div>
         <p>{text}</p>
