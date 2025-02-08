@@ -6,19 +6,16 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  min-height: 70vh;
+  align-items: flex-start;
+  height: 100vh;
   background-color: #f9f9f9;
 }
 
 .container {
   text-align: center;
   max-width: 400px;
-  width: 90%;
-  margin-top: 80px;
-  padding-bottom: 40px; /* Ajoute de l'espace sous les sections */
+  margin-top: 112px;
 }
 
 h1 {
@@ -32,13 +29,6 @@ h1 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
-}
-
-/* Ajustement de la disposition en colonne pour mobile */
-@media (max-width: 480px) {
-  .sections {
-    grid-template-columns: 1fr;
-  }
 }
 
 .section {

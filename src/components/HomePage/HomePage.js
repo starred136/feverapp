@@ -18,7 +18,7 @@ function HomePage() {
         </a>
 
         {/* Section 2 : Should I see a Doctor? */}
-        <a href="/page2" className="carts">
+        <a href="#" className="carts">
           <div className="section">
             <div className="circle small">
               <img src="assets/doctor.png" alt="Should I see a Doctor?" />
@@ -28,7 +28,7 @@ function HomePage() {
         </a>
 
         {/* Section 3 : Ibuprofen, Paracetamol, Fever Juice, Antibiotics? */}
-        <a href="/page2" className="carts">
+        <a href="#" className="carts">
           <div className="section">
             <div className="circle large custom-bg">
               <img src="assets/medications.png" alt="Ibuprofen, Paracetamol, Fever Juice, Antibiotics?" />
@@ -38,7 +38,7 @@ function HomePage() {
         </a>
 
         {/* Section 4 : Info Library */}
-        <a href="/page2" className="carts">
+        <a href="#" className="carts">
           <div className="section">
             <div className="circle small custom-bg">
               <img src="assets/info-library.png" alt="Info Library" />
