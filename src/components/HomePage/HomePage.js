@@ -1,6 +1,6 @@
-// src/HomePage.js
 import React from 'react';
-import './HomePage.css'; // Importer le fichier CSS
+import VideoPageRedirect from './VideoPageRedirect';  // Importer le composant VideoPageRedirect
+import './HomePage.css';
 
 function HomePage() {
   return (
@@ -8,14 +8,9 @@ function HomePage() {
       <h1>What can we help you with?</h1>
       <div className="sections">
         {/* Section 1 : My child has a Fever */}
-        <a href="/videopage" className="carts">
-          <div className="section">
-            <div className="circle small">
-              <img src="assets/child-fever.png" alt="My child has a Fever" />
-            </div>
-            <p>My child has a Fever</p>
-          </div>
-        </a>
+        <div className="carts">
+          <VideoPageRedirect />  {/* Utiliser VideoPageRedirect ici */}
+        </div>
 
         {/* Section 2 : Should I see a Doctor? */}
         <a href="#" className="carts">
