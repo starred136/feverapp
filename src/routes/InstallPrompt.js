@@ -51,7 +51,7 @@ const InstallPrompt = () => {
   return (
     <div style={styles.overlay}>
       <div style={styles.modalContent}>
-        <img src="/assets/icons/logo.png" alt="App Logo" style={styles.logo} />
+        <img src="/assets/logo.png" alt="App Logo" style={styles.logo} />
         <p style={styles.text}>Install this app on your mobile phone to continue</p>
         <button style={styles.installButton} onClick={handleInstall}>
           INSTALL
