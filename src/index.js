@@ -38,3 +38,17 @@ serviceWorkerRegistration.register();
 
 // Existing code for performance measuring
 reportWebVitals();
+ReactDOM.render(<App />, document.getElementById("root"));
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/serviceWorker.js").then(
+      (registration) => {
+        console.log("ServiceWorker registered: ", registration);
+      },
+      (error) => {
+        console.error("ServiceWorker registration failed: ", error);
+      }
+    );
+  });
+}
