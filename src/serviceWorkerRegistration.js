@@ -1,5 +1,3 @@
-// src/serviceWorkerRegistration.js
-
 // This function registers the service worker if supported by the browser.
 export function register() {
   if ('serviceWorker' in navigator) {

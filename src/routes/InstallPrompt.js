@@ -1,7 +1,7 @@
 // src/InstallPrompt.js
 import React, { useState, useEffect } from 'react';
 
-function InstallPrompt() {
+const InstallPrompt = () => {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
   const [showModal, setShowModal] = useState(false);
 
@@ -15,7 +15,6 @@ function InstallPrompt() {
     };
 
     window.addEventListener('beforeinstallprompt', handler);
-
     return () => window.removeEventListener('beforeinstallprompt', handler);
   }, []);
 
@@ -34,52 +33,63 @@ function InstallPrompt() {
     setDeferredPrompt(null);
   };
 
-  const handleDismiss = () => {
-    setShowModal(false);
-    localStorage.setItem('hasSeenInstallPrompt', 'true');
-  };
-
   if (!showModal) return null;
+
+  const styles = {
+    overlay: {
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      background: 'rgba(0, 0, 0, 0.7)', // Semi-transparent background
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      zIndex: 1000,
+    },
+    modalContent: {
+      background: 'white',
+      padding: '30px',
+      borderRadius: '10px',
+      textAlign: 'center',
+      boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.3)',
+      maxWidth: '400px',
+      width: '90%',
+    },
+    logo: {
+      width: '100px', // Logo size
+      height: 'auto',
+      marginBottom: '20px',
+    },
+    text: {
+      fontSize: '18px',
+      marginBottom: '20px',
+      color: '#333',
+    },
+    installButton: {
+      padding: '10px 20px',
+      backgroundColor: '#007BFF',
+      color: 'white',
+      border: 'none',
+      borderRadius: '5px',
+      cursor: 'pointer',
+      fontSize: '16px',
+    },
+  };
 
   return (
     <div style={styles.overlay}>
-      <div style={styles.modal}>
-        <h2>Install This App</h2>
-        <p>For a better experience, install this app on your desktop.</p>
-        <div>
-          <button onClick={handleInstall} style={styles.button}>Install</button>
-          <button onClick={handleDismiss} style={styles.button}>Maybe Later</button>
-        </div>
+      <div style={styles.modalContent}>
+        {/* Logo displayed above the message */}
+        <img src="/assets/icons/logo.png" alt="App Logo" style={styles.logo} />
+        <p style={styles.text}>Install this app on your mobile phone</p>
+        <button style={styles.installButton} onClick={handleInstall}>
+          INSTALL
+        </button>
       </div>
     </div>
   );
-}
-
-const styles = {
-  overlay: {
-    position: 'fixed',
-    top: 0, left: 0,
-    width: '100%',
-    height: '100%',
-    backgroundColor: 'rgba(0,0,0,0.5)',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    zIndex: 1000
-  },
-  modal: {
-    backgroundColor: '#fff',
-    padding: '2rem',
-    borderRadius: '8px',
-    textAlign: 'center',
-    maxWidth: '400px',
-    width: '90%'
-  },
-  button: {
-    margin: '0.5rem',
-    padding: '0.5rem 1rem',
-    cursor: 'pointer'
-  }
 };
 
 export default InstallPrompt;

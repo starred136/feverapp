@@ -1,58 +1,57 @@
+// src/InstallPrompt.js
 import React, { useState, useEffect } from "react";
+import "./InstallPromptModal.css"; // Updated CSS file with new styles
+import logo from "../assets/logo.png"; // Ensure the logo exists in this path
 
-const InstallPromptModal = () => {
-  const [deferredPrompt, setDeferredPrompt] = useState(null); // État pour stocker l'événement
-  const [showModal, setShowModal] = useState(false); // État pour afficher la boîte modale
+const InstallPrompt = () => {
+  const [deferredPrompt, setDeferredPrompt] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
+    // Listen for the beforeinstallprompt event
     const handleBeforeInstallPrompt = (e) => {
-      e.preventDefault(); // Empêche l'affichage par défaut de l'invite
-      setDeferredPrompt(e); // Stocke l'événement pour le déclencher plus tard
-      setShowModal(true); // Affiche la boîte modale
+      console.log("beforeinstallprompt event fired");
+      e.preventDefault(); // Prevent the native mini-infobar from appearing
+      setDeferredPrompt(e); // Save the event for later use
+      setShowModal(true);   // Show our custom install prompt modal
     };
 
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
-
     return () => {
-      window.removeEventListener(
-        "beforeinstallprompt",
-        handleBeforeInstallPrompt
-      );
+      window.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
     };
   }, []);
 
   const handleInstall = () => {
     if (deferredPrompt) {
-      deferredPrompt.prompt(); // Déclenche l'invite d'installation
+      deferredPrompt.prompt(); // Show the native install prompt
       deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === "accepted") {
           console.log("User accepted the install prompt");
-          if (window.gtag) {
-            window.gtag("event", "install_accepted");
-          }
         } else {
           console.log("User dismissed the install prompt");
-          if (window.gtag) {
-            window.gtag("event", "install_dismissed");
-          }
         }
-        setDeferredPrompt(null); // Réinitialise l'événement
+        setDeferredPrompt(null); // Clear the deferred prompt
       });
     }
-    setShowModal(false); // Ferme la boîte modale
+    setShowModal(false); // Hide the modal after the install attempt
   };
 
+  // If the modal should not be shown, render nothing
+  if (!showModal) return null;
+
   return (
-    showModal && (
-      <div className="modal">
-        <div className="modal-content">
-          <p>Install this app on your desktop or mobile device?</p>
-          <button onClick={handleInstall}>INSTALL</button>
-          <button onClick={() => setShowModal(false)}>CLOSE</button>
-        </div>
+    <div className="modal">
+      <div className="modal-content">
+        {/* Logo above the message */}
+        <img src={logo} alt="App Logo" className="modal-logo" />
+        <p className="modal-text">Install this app on your mobile phone</p>
+        <button className="install-button" onClick={handleInstall}>
+          INSTALL
+        </button>
       </div>
-    )
+    </div>
   );
 };
 
-export default InstallPromptModal;
+export default InstallPrompt;
