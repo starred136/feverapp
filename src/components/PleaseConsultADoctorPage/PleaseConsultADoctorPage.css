@@ -1,0 +1,41 @@
+.PleaseConsultADoctorPage {
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    padding: 16px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  img {
+    width: 100px;
+    margin-bottom: 16px;
+  }
+  
+  .PleaseConsultADoctorHeader {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .AdviceList {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 16px;
+  }
+  
+  .AdviceList li {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  
+  .NextButton {
+    background-color: #f16675;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
