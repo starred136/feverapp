@@ -1,10 +1,24 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
-const RedirectComponent = ({ targetPath, children }) => {
-  const navigate = useNavigate();
+const RedirectComponent = () => {
+  const [showInstallPrompt, setShowInstallPrompt] = useState(false);
 
-  return <div onClick={() => navigate(targetPath)}>{children}</div>;
+  useEffect(() => {
+    if (!window.matchMedia("(display-mode: standalone)").matches) {
+      setShowInstallPrompt(true);
+    }
+  }, []);
+
+  return (
+    <>
+      {showInstallPrompt && (
+        <div className="install-popup">
+          <p>📲 Install the app for a better experience!</p>
+          <button onClick={() => setShowInstallPrompt(false)}>OK</button>
+        </div>
+      )}
+    </>
+  );
 };
 
 export default RedirectComponent;

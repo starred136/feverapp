@@ -1,3 +1,11 @@
+.PleaseConsultADoctorPage .ProgressBarImage {
+  display: none !important;
+}
+
+.PleaseConsultADoctorPage .SkipLink {
+  display: none !important;
+}
+
 /* ProgressBar.css */
 .ProgressBar {
     display: flex;
