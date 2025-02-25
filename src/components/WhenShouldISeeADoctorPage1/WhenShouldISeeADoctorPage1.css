@@ -1,0 +1,58 @@
+.WhenShouldISeeADoctorPage1 {
+    max-width: 400px;
+    margin: auto;
+    padding: 16px;
+    text-align: center;
+    background: white; /* Retain white background */
+    border-radius: 0; /* Remove the border radius */
+    box-shadow: none; /* Remove the shadow */
+  }
+  
+  .WhenShouldISeeADoctorPage1OptionLists {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .OptionButton {
+    width: 96%;
+    background-color: #ffdbdf;
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    margin: auto;
+  }
+  
+  .OptionButton:hover {
+    background-color: #ffc5c9;
+  }
+  
+  /* Skip Button - Positioned 16px from the bottom of the screen */
+  .SkipButton {
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 199px;
+    height: 48px;
+    background-color: #f16675;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .SkipButton:hover {
+    background-color: #d43d4c;
+  }
+  
