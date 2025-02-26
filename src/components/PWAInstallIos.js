@@ -13,12 +13,12 @@
 //     <div style={styles.overlay}>
 //         <div style={styles.modalContent}>
 //             <img src="assets/logo.png" alt="App Logo" styles={styles.logo} />
-//       {!isInstalled ? (
-//         <p>Please open the installed PWA.</p>
-//       ) : (
-//         <p style={styles.instructions}>To install this PWA on your iOS device, tap <img style={styles.shareIcon} src="assets/share.png" alt="Share Icon"></img> the Share button and select "Add to Home Screen".</p>
-//       )}
-//     </div>
+//             {!isInstalled ? (
+//             <p>Please open the installed App.</p>
+//              ) : (
+//             <p style={styles.instructions}>For a better experience please install it on your iOS device, tap <img style={styles.shareIcon} src="assets/share.png" alt="Share Icon"></img> the Share button and select "Add to Home Screen".</p>
+//                )}
+//         </div>
 //     </div>
 //   );
 // };
@@ -103,9 +103,9 @@ const PWAInstallIos = () => {
         <div style={styles.modalContent}>
             <img src="assets/logo.png" alt="App Logo" styles={styles.logo} />
       
-        {/* <p>Please open the installed PWA.</p> */}
-        <p style={styles.instructions}>To install this PWA on your iOS device, tap <img style={styles.shareIcon} src="assets/share.png" alt="Share Icon"></img> the Share button and select "Add to Home Screen".</p>
-    </div>
+            {/* <p>Please open the installed PWA.</p> */}
+            <p style={styles.instructions}>For a better experience please install it on your iOS device, tap <img style={styles.shareIcon} src="assets/share.png" alt="Share Icon"></img> the Share button and select "Add to Home Screen".</p>
+        </div>
     </div>
   );
 };
