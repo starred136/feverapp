@@ -13,6 +13,8 @@ export function register() {
   }
 }
 
+
+
 // Optional: This function can be used to unregister the service worker.
 export function unregister() {
   if ('serviceWorker' in navigator) {

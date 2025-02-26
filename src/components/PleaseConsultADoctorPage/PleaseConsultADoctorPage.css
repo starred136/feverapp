@@ -1,0 +1,85 @@
+/* Cacher l'image de la barre de progression et le texte Skip uniquement sur PleaseConsultADoctorPage */
+/* Cacher les éléments uniquement sur PleaseConsultADoctorPage */
+.PleaseConsultADoctorPage .ProgressBarImage {
+    display: none !important;
+}
+
+.PleaseConsultADoctorPage .SkipLink {
+    display: none !important;
+}
+
+
+
+/* Image principale - Ajustement pour la remonter */
+.PleaseConsultADoctorPageImage {
+    width: 100%;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.PleaseConsultADoctorPageImage img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    display: block;
+}
+
+/* En-tête */
+.PleaseConsultADoctorPageHeader {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+/* Liste des avertissements */
+.PleaseConsultADoctorYourChildIsUnder12WarningSign,
+.PleaseConsultADoctorAllChildrenUnderTheAgeWarningSign {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.check-image {
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    align-self: center;
+}
+
+/* Bouton Suivant */
+.PleaseConsultADoctorPageNextButton {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.NextButton {
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 199px;
+    height: 48px;
+    background-color: #f16675;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .NextButton:hover {
+    background-color: #d43d4c;
+  }
+  
+/* Responsivité */
+@media (max-width: 600px) {
+    .PleaseConsultADoctorPageHeader {
+        font-size: 22px;
+    }
+}

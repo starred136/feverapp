@@ -1,0 +1,51 @@
+.PleaseConsultADoctorPage .ProgressBarImage {
+  display: none !important;
+}
+
+.PleaseConsultADoctorPage .SkipLink {
+  display: none !important;
+}
+
+/* ProgressBar.css */
+.ProgressBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .BackArrowLink img {
+    width: 25px;
+
+    cursor: pointer;
+  }
+  
+  .BackArrowLink img:hover {
+    filter: invert(21%) sepia(79%) saturate(2050%) hue-rotate(191deg) brightness(94%) contrast(102%);
+  }
+  
+  .ProgressBarImage img {
+    width: 80%;
+    margin-bottom: 6px;
+    
+    
+  }
+
+  /* .Back-icon {
+    width: 25px;
+  } */
+  
+  .SkipLink {
+    background: none;
+    border: none;
+    text-decoration: none;
+    font-weight: 400;
+    color: #959595;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .SkipLink:hover {
+    color: rgb(53, 79, 231);
+  }
+  
